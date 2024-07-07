@@ -3,7 +3,8 @@
     function startConnect(){
         clientID = "clientID - "+parseInt(Math.random() * 100);
         //host = "public.mqtthq.com";
-        host = "test.mosquitto.org"; 
+        host = "test.mosquitto.org";
+        
         //host = "broker.hivemq.com";   
         //host = "broker.emqx.io";   
         port = "8080";     // avec test.mosquitto.org
