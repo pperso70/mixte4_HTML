@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>High Voltages - MQTT</title>
+      <link rel="stylesheet" href="style.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.min.js" type="text/javascript"></script>
+      <script src="demo.js" type="text/javascript"></script>
+      <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+   </head>
+   <body>
+      <div class="wrapper">
+         <section id="aff_buttons_cam"> 
+         <input type="button" onclick="Down()" value="Down">  
+         <input type="button" onclick="Up()" value="UP">  
+         <input type="button" onclick="Excur()" value="Excur">  
+         <input type="button" onclick="Stop()" value="Stop">  
+         <input type="button" onclick="Raz_milieu()" value="Raz_milieu">
+         <input type="button" onclick="Photo()" value="Photo">          
+         </section>
+
+         <div class="Pos_Mes_Analog">
+            <span>position molette</span> <span id="Cam_Val1">0</span>
+            <span>temperature radiateurs</span> <span id="Cam_Val2">0</span>   
+            <span>RSSI</span> <span id="Cam_Val3">0</span>      
+         </div>
+
+         <div class="input-group" id="lamp-group" title="Flashlight LED">
+            <label for="lamp">Light</label>
+            <div class="range-min">Off</div>
+            <input type="range" id="lamp" min="0" max="100" value="0" class="action-setting">
+            <div class="range-max">Full&#9888;</div>
+         </div>
+
+         <h1>Image encodée en Base64</h1>
+         <img id="base64Image" alt="Base64 Image" />
+
+         <div id="messages"></div>
+      </div>
+   </body>
+</html>
